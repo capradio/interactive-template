@@ -4,10 +4,7 @@
 <title><%= project.title %></title>
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://media.npr.org/templates/favicon/favicon-180x180.png" />
-<link rel="icon" sizes="96x96" href="https://media.npr.org/templates/favicon/favicon-96x96.png" />
-<link rel="icon" sizes="32x32" href="https://media.npr.org/templates/favicon/favicon-32x32.png" />
-<link rel="icon" sizes="16x16" href="https://media.npr.org/templates/favicon/favicon-16x16.png" />
+<link rel="shortcut icon" href="http://www.capradio.org/favicon.ico" />
 
 <!-- Safari, you're the worst -->
 <meta name='format-detection' content='telephone=no'>
@@ -16,7 +13,7 @@
 <!-- BEGIN TWITTER SUMMARY CARD -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="<%= project.title %>">
-<meta name="twitter:site" content="@nprviz">
+<meta name="twitter:site" content="@capradionews">
 <meta name="twitter:url" content="<%= project.url %>">
 <meta name="twitter:image" content="<%= project.url + project.image %>">
 <meta name="twitter:description" content="<%= project.description %>">
@@ -24,7 +21,7 @@
 <!-- Social sharing meta -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="<%= project.title %>">
-<meta property="og:site_name" content="NPR Visuals">
+<meta property="og:site_name" content="capradio.org">
 <meta property="og:url" content="<%= project.url %>">
 <meta property="og:image" content="<%= project.url + project.image %>">
 <meta property="og:description" content="<%= project.description %>">
@@ -46,11 +43,11 @@
   },
   "author": {
     "@type": "Person",
-    "name": "NPR Staff"
+    "name": "CapRadio Staff"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "NPR",
+    "name": "Capital Public Radio",
     "logo": {
       "@type": "ImageObject",
       "url": "<%= project.url %>assets/logo.png",

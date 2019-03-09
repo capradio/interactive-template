@@ -1,11 +1,11 @@
 {
   "s3": {
     "stage": {
-      "bucket": "stage-apps.npr.org",
+      "bucket": "capradio.app.stage",
       "path": "{%= app_name %}"
     },
     "live": {
-      "bucket": "apps.npr.org",
+      "bucket": "projects.capradio.org",
       "path": "{%= app_name %}"
     }
   },
