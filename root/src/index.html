@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <%= t.include("partials/_head.html", grunt.data.json) %>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    <%= t.include("partials/_gtmBody.html") %>
 
     <script src="app.js" async></script>
     <%= t.include("partials/_analytics.html") %>

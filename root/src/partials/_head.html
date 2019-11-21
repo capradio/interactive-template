@@ -1,74 +1,86 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <title><%= project.title %></title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="http://www.capradio.org/favicon.ico" />
 
+<!-- Google Tag Manager -->
+<script>
+  (function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-KLJNT5P");
+</script>
+<!-- End Google Tag Manager -->
+
 <!-- Safari, you're the worst -->
-<meta name='format-detection' content='telephone=no'>
+<meta name="format-detection" content="telephone=no" />
 
 <% if (!project.embedded) { %>
 <!-- GDPR compliance -->
 <script src="https://apps.npr.org/gdpr/gdprCompliance.js" async defer></script>
 
 <!-- BEGIN TWITTER SUMMARY CARD -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="<%= project.title %>">
-<meta name="twitter:site" content="@capradionews">
-<meta name="twitter:url" content="<%= project.url %>">
-<meta name="twitter:image" content="<%= project.url + project.image %>">
-<meta name="twitter:description" content="<%= project.description %>">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="<%= project.title %>" />
+<meta name="twitter:site" content="@capradionews" />
+<meta name="twitter:url" content="<%= project.url %>" />
+<meta name="twitter:image" content="<%= project.url + project.image %>" />
+<meta name="twitter:description" content="<%= project.description %>" />
 
 <!-- Social sharing meta -->
-<meta property="og:type" content="article">
-<meta property="og:title" content="<%= project.title %>">
-<meta property="og:site_name" content="capradio.org">
-<meta property="og:url" content="<%= project.url %>">
-<meta property="og:image" content="<%= project.url + project.image %>">
-<meta property="og:description" content="<%= project.description %>">
-<meta property="fb:app_id" content="138837436154588"/>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<%= project.title %>" />
+<meta property="og:site_name" content="capradio.org" />
+<meta property="og:url" content="<%= project.url %>" />
+<meta property="og:image" content="<%= project.url + project.image %>" />
+<meta property="og:description" content="<%= project.description %>" />
+<meta property="fb:app_id" content="138837436154588" />
 
 <!-- Google structured data -->
 <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "NewsArticle",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "<%= project.url %>"
-  },
-  "headline": "<%= project.title %>",
-  "image": {
-    "@type": "ImageObject",
-    "url": "<%= project.url + project.image %>"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "CapRadio Staff"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Capital Public Radio",
-    "logo": {
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<%= project.url %>"
+    },
+    "headline": "<%= project.title %>",
+    "image": {
       "@type": "ImageObject",
-      "url": "<%= project.url %>assets/logo.png",
-      "width": 2176,
-      "height": 725
-    }
-  },
-  "description": "<%= project.description %>",
-  "datePublished": "<%= new Date().toISOString() %>"
-}
+      "url": "<%= project.url + project.image %>"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "CapRadio Staff"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Capital Public Radio",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%= project.url %>assets/logo.png",
+        "width": 2176,
+        "height": 725
+      }
+    },
+    "description": "<%= project.description %>",
+    "datePublished": "<%= new Date().toISOString() %>"
+  }
 </script>
 
 <!-- Chartbeat top -->
-<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<script type="text/javascript">
+  var _sf_startpt = new Date().getTime();
+</script>
 
-<%
-// if !project.embedded...
-} 
-%>
-
-<%= t.include("partials/_webfonts.html") %>
+<% // if !project.embedded... } %> <%= t.include("partials/_webfonts.html") %>
